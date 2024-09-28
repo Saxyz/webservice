@@ -1,7 +1,7 @@
 package com.sena.webservice.controller;
 
 import com.sena.webservice.dto.UserDTO;
-import com.sena.webservice.model.User;
+import com.sena.webservice.model.Userr;
 import com.sena.webservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -38,8 +38,8 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<User> createUser(@RequestBody UserDTO userDTO){
-        User userSaved = userService.create(userDTO);
-        return ResponseEntity.status(HttpStatus.CREATED).body(userSaved);
+    public ResponseEntity<Userr> createUser(@RequestBody UserDTO userDTO){
+        Userr userrSaved = userService.create(userDTO);
+        return ResponseEntity.status(HttpStatus.CREATED).body(userrSaved);
     }
 }

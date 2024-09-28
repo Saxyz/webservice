@@ -4,7 +4,7 @@ import com.sena.webservice.dto.UserDTO;
 import jakarta.persistence.*;
 
 @Entity
-public class User {
+public class Userr {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -12,15 +12,15 @@ public class User {
     private String name;
     private String password;
 
-    public User() {
+    public Userr() {
     }
 
-    public User(UserDTO userDTO) {
+    public Userr(UserDTO userDTO) {
         this.name = userDTO.name();
         this.password = userDTO.password();
     }
 
-    public User(Long id, String name, String password) {
+    public Userr(Long id, String name, String password) {
         this.id = id;
         this.name = name;
         this.password = password;
